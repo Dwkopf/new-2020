@@ -4,22 +4,22 @@ import MoviePreview from "./movie-preview";
 import MovieDetails from "./movie-details";
 
 
-
 function App() {
   const [currentMovie, setCurrentMovie] = React.useState(null);
  
 
   return (
     <div>
-      <h1 style={{textAlign:'center'}}>movie info</h1>
-      
-      {movies.map((movie)=>{
-        return (
-          <MoviePreview key={movie.title}
-           movie={movie} 
-           onClickFunction={setCurrentMovie}
-           />)
-      })};
+      <h1 style={{textAlign:'center'}}>Movie Information</h1>
+      <div>
+        {movies.map((movie)=>{
+          return (
+            <MoviePreview key={movie.title}
+            movie={movie} 
+            onClickFunction={setCurrentMovie}
+            />)
+        })};
+      </div>
       {
   currentMovie  ?
     <MovieDetails currentMovie = {currentMovie}/>

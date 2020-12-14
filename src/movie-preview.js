@@ -2,7 +2,7 @@ import React from 'react';
 
 const movieContainerStyles = {
     backgroundColor: '#F2EDEB',
-    height: '250px',
+    height: '350px',
     width: '250px',
     margin: '25px',
     padding: '5px',
@@ -15,6 +15,10 @@ const movieContainerStyles = {
 }
 
 
+const imgStyle = {
+  height:'150px',
+  width: '100px'
+}
 
 
 
@@ -30,6 +34,7 @@ const MoviePreview = (props) => {
               <p style={{fontWeight:'bold'}}>{movie.title}</p>
               <p>{movie.rating}</p>
               <p>{movie.director}</p>
+              <p><img alt={movie.title} src={movie.posterUrl}style={imgStyle}/></p>
             
           </button>
     )
